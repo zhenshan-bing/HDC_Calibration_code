@@ -1,0 +1,126 @@
+<?xml version="0.0" ?>
+<robot name="plane">
+  <link name="planeLink">
+  <contact>
+      <lateral_friction value="1"/>
+  </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".0"/>
+       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+				<mesh filename="plane100.obj" scale="1 1 1"/>
+      </geometry>
+       <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 -5"/>
+      <geometry>
+	 	<box size="200 200 10"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_1_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_1"/>
+  </joint>
+
+  <link name="wall_1">
+  	<visual>
+      <origin rpy="0 0 0" xyz="0 1.25 0"/>
+      <geometry>
+	 	<box size="2 0.5 0.5"/>
+      </geometry>
+      <material name="grey">
+	    <color rgba="0.5 0.5 0.5 0.8"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 1.25 0"/>
+      <geometry>
+	 	<box size="2 0.5 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_2_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_2"/>
+  </joint>
+
+  <link name="wall_2">
+  	<visual>
+      <origin rpy="0 0 0" xyz="0 -1.25 0"/>
+      <geometry>
+	 	<box size="2 0.5 0.5"/>
+      </geometry>
+      <material name="grey">
+	    <color rgba="0.5 0.5 0.5 0.8"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 -1.25 0"/>
+      <geometry>
+	 	<box size="2 0.5 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_3_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_3"/>
+  </joint>
+
+  <link name="wall_3">
+  	<visual>
+      <origin rpy="0 0 0" xyz="1.25 0 0"/>
+      <geometry>
+	 	<box size="0.5 3 0.5"/>
+      </geometry>
+      <material name="grey">
+	    <color rgba="0.5 0.5 0.5 0.8"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="1.25 0 0"/>
+      <geometry>
+	 	<box size="0.5 3 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_4_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_4"/>
+  </joint>
+
+  <link name="wall_4">
+  	<visual>
+      <origin rpy="0 0 0" xyz="-1.25 0 0"/>
+      <geometry>
+	 	<box size="0.5 3 0.5"/>
+      </geometry>
+      <material name="grey">
+	    <color rgba="0.5 0.5 0.5 0.8"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-1.25 0 0"/>
+      <geometry>
+	 	<box size="0.5 3 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+</robot>
+

@@ -1,0 +1,2 @@
+All files avs_kitti_*.p contain data taken from the KITTI Vision Benchmark (http://www.cvlibs.net/datasets/kitti/)
+under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0) for non-commercial purposes.

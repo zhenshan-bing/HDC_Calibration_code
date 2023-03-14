@@ -1,0 +1,896 @@
+<?xml version="0.0" ?>
+<robot name="plane">
+  <link name="planeLink">
+  <contact>
+      <lateral_friction value="1"/>
+  </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value=".0"/>
+       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+				<mesh filename="plane100.obj" scale="1 1 1"/>
+      </geometry>
+       <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 -5"/>
+      <geometry>
+	 	<box size="200 200 10"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_1_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_1"/>
+  </joint>
+
+  <link name="wall_1">
+  	<visual>
+      <origin rpy="0 0 0" xyz="0 -2.1 0.2"/>
+      <geometry>
+	 	<box size="4 0.2 0.5"/>
+      </geometry>
+      <material name="black">
+	    <color rgba="0.5 0.5 0.5 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 -2.1 0.2"/>
+      <geometry>
+	 	<box size="4 0.2 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_2_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_2"/>
+  </joint>
+
+  <link name="wall_2">
+  	<visual>
+      <origin rpy="0 0 0" xyz="1 2.1 0.2"/>
+      <geometry>
+	 	<box size="2 0.2 0.5"/>
+      </geometry>
+      <material name="black">
+	    <color rgba="0.5 0.5 0.5 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="1 2.1 0.2"/>
+      <geometry>
+	 	<box size="2 0.2 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_3_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_3"/>
+  </joint>
+
+  <link name="wall_3">
+  	<visual>
+      <origin rpy="0 0 0" xyz="2.1 2.2 0.2"/>
+      <geometry>
+	 	<box size="0.2 8.8 0.5"/>
+      </geometry>
+      <material name="black">
+	    <color rgba="0.5 0.5 0.5 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="2.1 2.2 0.2"/>
+      <geometry>
+	 	<box size="0.2 8.8 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_4_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_4"/>
+  </joint>
+
+  <link name="wall_4">
+  	<visual>
+      <origin rpy="0 0 0" xyz="-2.1 -1.1 0.2"/>
+      <geometry>
+	 	<box size="0.2 6.6 0.5"/>
+      </geometry>
+      <material name="black">
+	    <color rgba="0.5 0.5 0.5 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-2.1 -1.1 0.2"/>
+      <geometry>
+	 	<box size="0.2 6.6 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_5_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_5"/>
+  </joint>
+
+  <link name="wall_5">
+  	<visual>
+      <origin rpy="0 0 0" xyz="-1 -4.3 0.2"/>
+      <geometry>
+	 	<box size="2.0 0.2 0.5"/>
+      </geometry>
+      <material name="black">
+	    <color rgba="0.5 0.5 0.5 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-1 -4.3 0.2"/>
+      <geometry>
+	 	<box size="2.0 0.2 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_6_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_6"/>
+  </joint>
+
+  <link name="wall_6">
+  	<visual>
+      <origin rpy="0 0 0" xyz="-0.1 -5.5 0.2"/>
+      <geometry>
+	 	<box size="0.2 2.2 0.5"/>
+      </geometry>
+      <material name="black">
+	    <color rgba="0.5 0.5 0.5 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.1 -5.5 0.2"/>
+      <geometry>
+	 	<box size="0.2 2.2 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_7_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_7"/>
+  </joint>
+
+  <link name="wall_7">
+  	<visual>
+      <origin rpy="0 0 0" xyz="1.0 6.5 0.2"/>
+      <geometry>
+	 	<box size="2.0 0.2 0.5"/>
+      </geometry>
+      <material name="black">
+	    <color rgba="0.5 0.5 0.5 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="1.0 6.5 0.2"/>
+      <geometry>
+	 	<box size="2.0 0.2 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_8_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_8"/>
+  </joint>
+
+  <link name="wall_8">
+  	<visual>
+      <origin rpy="0 0 0" xyz="4.3 4.3 0.2"/>
+      <geometry>
+	 	<box size="4.2 0.2 0.5"/>
+      </geometry>
+      <material name="black">
+	    <color rgba="0.5 0.5 0.5 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="4.3 4.3 0.2"/>
+      <geometry>
+	 	<box size="4.2 0.2 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_9_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_9"/>
+  </joint>
+
+  <link name="wall_9">
+  	<visual>
+      <origin rpy="0 0 0" xyz="4.3 6.5 0.2"/>
+      <geometry>
+	 	<box size="0.2 4.2 0.5"/>
+      </geometry>
+      <material name="black">
+	    <color rgba="0.5 0.5 0.5 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="4.3 6.5 0.2"/>
+      <geometry>
+	 	<box size="0.2 4.2 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_10_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_10"/>
+  </joint>
+
+  <link name="wall_10">
+  	<visual>
+      <origin rpy="0 0 0" xyz="6.5 4.4 0.2"/>
+      <geometry>
+	 	<box size="0.2 4.4 0.5"/>
+      </geometry>
+      <material name="black">
+	    <color rgba="0.5 0.5 0.5 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="6.5 4.4 0.2"/>
+      <geometry>
+	 	<box size="0.2 4.4 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_11_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_11"/>
+  </joint>
+
+  <link name="wall_11">
+  	<visual>
+      <origin rpy="0 0 0" xyz="4.3 1.1 0.2"/>
+      <geometry>
+	 	<box size="0.2 2.2 0.5"/>
+      </geometry>
+      <material name="black">
+	    <color rgba="0.5 0.5 0.5 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="4.3 1.1 0.2"/>
+      <geometry>
+	 	<box size="0.2 2.2 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_12_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_12"/>
+  </joint>
+
+  <link name="wall_12">
+  	<visual>
+      <origin rpy="0 0 0" xyz="5.3 -0.1 0.2"/>
+      <geometry>
+	 	<box size="2.2 0.2 0.5"/>
+      </geometry>
+      <material name="black">
+	    <color rgba="0.5 0.5 0.5 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="5.3 -0.1 0.2"/>
+      <geometry>
+	 	<box size="2.2 0.2 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_13_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_13"/>
+  </joint>
+
+  <link name="wall_13">
+  	<visual>
+      <origin rpy="0 0 0" xyz="6.5 -4.3 0.2"/>
+      <geometry>
+	 	<box size="0.2 8.6 0.5"/>
+      </geometry>
+      <material name="black">
+	    <color rgba="0.5 0.5 0.5 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="6.5 -4.3 0.2"/>
+      <geometry>
+	 	<box size="0.2 8.6 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_14_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_14"/>
+  </joint>
+
+  <link name="wall_14">
+  	<visual>
+      <origin rpy="0 0 0" xyz="-1.1 -8.7 0.2"/>
+      <geometry>
+	 	<box size="15.4 0.2 0.5"/>
+      </geometry>
+      <material name="black">
+	    <color rgba="0.5 0.5 0.5 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-1.1 -8.7 0.2"/>
+      <geometry>
+	 	<box size="15.4 0.2 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_15_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_15"/>
+  </joint>
+
+  <link name="wall_15">
+  	<visual>
+      <origin rpy="0 0 0" xyz="2.1 -6.4 0.2"/>
+      <geometry>
+	 	<box size="0.2 4.4 0.5"/>
+      </geometry>
+      <material name="black">
+	    <color rgba="0.5 0.5 0.5 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="2.1 -6.4 0.2"/>
+      <geometry>
+	 	<box size="0.2 4.4 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_16_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_16"/>
+  </joint>
+
+  <link name="wall_16">
+  	<visual>
+      <origin rpy="0 0 0" xyz="3.2 -4.3 0.2"/>
+      <geometry>
+	 	<box size="2.0 0.2 0.5"/>
+      </geometry>
+      <material name="black">
+	    <color rgba="0.5 0.5 0.5 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="3.2 -4.3 0.2"/>
+      <geometry>
+	 	<box size="2.0 0.2 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_17_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_17"/>
+  </joint>
+
+  <link name="wall_17">
+  	<visual>
+      <origin rpy="0 0 0" xyz="4.3 -4.4 0.2"/>
+      <geometry>
+	 	<box size="0.2 4.4 0.5"/>
+      </geometry>
+      <material name="black">
+	    <color rgba="0.5 0.5 0.5 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="4.3 -4.4 0.2"/>
+      <geometry>
+	 	<box size="0.2 4.4 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_18_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_18"/>
+  </joint>
+
+  <link name="wall_18">
+  	<visual>
+      <origin rpy="0 0 0" xyz="8.7 0.0 0.2"/>
+      <geometry>
+	 	<box size="0.2 17.6 0.5"/>
+      </geometry>
+      <material name="black">
+	    <color rgba="0.5 0.5 0.5 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="8.7 0.0 0.2"/>
+      <geometry>
+	 	<box size="0.2 17.6 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_19_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_19"/>
+  </joint>
+
+  <link name="wall_19">
+  	<visual>
+      <origin rpy="0 0 0" xyz="0.0 8.7 0.2"/>
+      <geometry>
+	 	<box size="17.2 0.2 0.5"/>
+      </geometry>
+      <material name="black">
+	    <color rgba="0.5 0.5 0.5 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.0 8.7 0.2"/>
+      <geometry>
+	 	<box size="17.2 0.2 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_20_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_20"/>
+  </joint>
+
+  <link name="wall_20">
+  	<visual>
+      <origin rpy="0 0 0" xyz="-8.7 0.1 0.2"/>
+      <geometry>
+	 	<box size="0.2 17.4 0.5"/>
+      </geometry>
+      <material name="black">
+	    <color rgba="0.5 0.5 0.5 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-8.7 0.1 0.2"/>
+      <geometry>
+	 	<box size="0.2 17.4 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_21_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_21"/>
+  </joint>
+
+  <link name="wall_21">
+  	<visual>
+      <origin rpy="0 0 0" xyz="-6.5 -5.4 0.2"/>
+      <geometry>
+	 	<box size="0.2 6.4 0.5"/>
+      </geometry>
+      <material name="black">
+	    <color rgba="0.5 0.5 0.5 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-6.5 -5.4 0.2"/>
+      <geometry>
+	 	<box size="0.2 6.4 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_22_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_22"/>
+  </joint>
+
+  <link name="wall_22">
+  	<visual>
+      <origin rpy="0 0 0" xyz="-6.5 4.4 0.2"/>
+      <geometry>
+	 	<box size="0.2 4.4 0.5"/>
+      </geometry>
+      <material name="black">
+	    <color rgba="0.5 0.5 0.5 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-6.5 4.4 0.2"/>
+      <geometry>
+	 	<box size="0.2 4.4 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_23_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_23"/>
+  </joint>
+
+  <link name="wall_23">
+  	<visual>
+      <origin rpy="0 0 0" xyz="-4.2 6.5 0.2"/>
+      <geometry>
+	 	<box size="4.4 0.2 0.5"/>
+      </geometry>
+      <material name="black">
+	    <color rgba="0.5 0.5 0.5 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-4.2 6.5 0.2"/>
+      <geometry>
+	 	<box size="4.4 0.2 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_24_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_24"/>
+  </joint>
+
+  <link name="wall_24">
+  	<visual>
+      <origin rpy="0 0 0" xyz="-2.1 7.6 0.2"/>
+      <geometry>
+	 	<box size="0.2 2.0 0.5"/>
+      </geometry>
+      <material name="black">
+	    <color rgba="0.5 0.5 0.5 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-2.1 7.6 0.2"/>
+      <geometry>
+	 	<box size="0.2 2.0 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_25_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_25"/>
+  </joint>
+
+  <link name="wall_25">
+  	<visual>
+      <origin rpy="0 0 0" xyz="-2.1 4.3 0.2"/>
+      <geometry>
+	 	<box size="4.2 0.2 0.5"/>
+      </geometry>
+      <material name="black">
+	    <color rgba="0.5 0.5 0.5 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-2.1 4.3 0.2"/>
+      <geometry>
+	 	<box size="4.2 0.2 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_26_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_26"/>
+  </joint>
+
+  <link name="wall_26">
+  	<visual>
+      <origin rpy="0 0 0" xyz="-4.3 -1.1 0.2"/>
+      <geometry>
+	 	<box size="0.2 11.0 0.5"/>
+      </geometry>
+      <material name="black">
+	    <color rgba="0.5 0.5 0.5 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-4.3 -1.1 0.2"/>
+      <geometry>
+	 	<box size="0.2 11.0 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_27_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_27"/>
+  </joint>
+
+  <link name="wall_27">
+  	<visual>
+      <origin rpy="0 0 0" xyz="-3.2 0.1 0.2"/>
+      <geometry>
+	 	<box size="2.0 0.2 0.5"/>
+      </geometry>
+      <material name="black">
+	    <color rgba="0.5 0.5 0.5 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-3.2 0.1 0.2"/>
+      <geometry>
+	 	<box size="2.0 0.2 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_28_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_28"/>
+  </joint>
+
+  <link name="wall_28">
+  	<visual>
+      <origin rpy="0 0 0" xyz="-5.5 0.1 0.2"/>
+      <geometry>
+	 	<box size="2.2 0.2 0.5"/>
+      </geometry>
+      <material name="black">
+	    <color rgba="0.5 0.5 0.5 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-5.5 0.1 0.2"/>
+      <geometry>
+	 	<box size="2.2 0.2 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wall_29_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="wall_29"/>
+  </joint>
+
+  <link name="wall_29">
+  	<visual>
+      <origin rpy="0 0 0" xyz="-3.2 -6.5 0.2"/>
+      <geometry>
+	 	<box size="2.0 0.2 0.5"/>
+      </geometry>
+      <material name="black">
+	    <color rgba="0.5 0.5 0.5 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-3.2 -6.5 0.2"/>
+      <geometry>
+	 	<box size="2.0 0.2 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="block_1_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="block_1"/>
+  </joint>
+
+  <link name="block_1">
+  	<visual>
+      <origin rpy="0 0 0" xyz="7.6 2.1 0.2"/>
+      <geometry>
+	 	<box size="1.8 0.2 0.5"/>
+      </geometry>
+      <material name="red">
+	    <color rgba="1.0 0.0 0.0 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="7.6 2.1 0.2"/>
+      <geometry>
+	 	<box size="1.8 0.2 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="block_2_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="block_2"/>
+  </joint>
+
+  <link name="block_2">
+  	<visual>
+      <origin rpy="0 0 0" xyz="-0.1 -3.2 0.2"/>
+      <geometry>
+	 	<box size="0.2 1.8 0.5"/>
+      </geometry>
+      <material name="red">
+	    <color rgba="1.0 0.0 0.0 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.1 -3.2 0.2"/>
+      <geometry>
+	 	<box size="0.2 1.8 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="block_3_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="block_3"/>
+  </joint>
+
+  <link name="block_3">
+  	<visual>
+      <origin rpy="0 0 0" xyz="-1.2 -6.5 0.2"/>
+      <geometry>
+	 	<box size="1.8 0.2 0.5"/>
+      </geometry>
+      <material name="red">
+	    <color rgba="1.0 0.0 0.0 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-1.2 -6.5 0.2"/>
+      <geometry>
+	 	<box size="1.8 0.2 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="block_4_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="block_4"/>
+  </joint>
+
+  <link name="block_4">
+  	<visual>
+      <origin rpy="0 0 0" xyz="-7.6 -2.3 0.2"/>
+      <geometry>
+	 	<box size="1.8 0.2 0.5"/>
+      </geometry>
+      <material name="red">
+	    <color rgba="1.0 0.0 0.0 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-7.6 -2.3 0.2"/>
+      <geometry>
+	 	<box size="1.8 0.2 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="block_5_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="block_5"/>
+  </joint>
+
+  <link name="block_5">
+  	<visual>
+      <origin rpy="0 0 0" xyz="-7.6 2.3 0.2"/>
+      <geometry>
+	 	<box size="1.8 0.2 0.5"/>
+      </geometry>
+      <material name="red">
+	    <color rgba="1.0 0.0 0.0 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-7.6 2.3 0.2"/>
+      <geometry>
+	 	<box size="1.8 0.2 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="block_6_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="block_6"/>
+  </joint>
+
+  <link name="block_6">
+  	<visual>
+      <origin rpy="0 0 0" xyz="-1.0 6.5 0.2"/>
+      <geometry>
+	 	<box size="1.8 0.2 0.5"/>
+      </geometry>
+      <material name="red">
+	    <color rgba="1.0 0.0 0.0 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-1.0 6.5 0.2"/>
+      <geometry>
+	 	<box size="1.8 0.2 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="block_7_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <parent link="planeLink"/>
+    <child link="block_7"/>
+  </joint>
+
+  <link name="block_7">
+  	<visual>
+      <origin rpy="0 0 0" xyz="-2.1 3.2 0.2"/>
+      <geometry>
+	 	<box size="0.2 1.8 0.5"/>
+      </geometry>
+      <material name="red">
+	    <color rgba="1.0 0.0 0.0 0.9"/>
+	  </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-2.1 3.2 0.2"/>
+      <geometry>
+	 	<box size="0.2 1.8 0.5"/>
+      </geometry>
+    </collision>
+  </link>
+
+  
+
+</robot>
+
